@@ -49,15 +49,52 @@ addTwoNumbers(-1,-3)
 addTwoNumbers(-4,10)
 addTwoNumbers("chubby", "puppy")
 
+//"chubbypuppy"
 //It concats two strings.
 
 addTwoNumbers(["one"], ["two"])
 
-//It also concats arrays. 
+//"onetwo"
+//It also concats text within separate arrays. 
 
 var dog = {};
 var cat = {};
 
 addTwoNumbers(dog, cat)
 
-//Adding two empty objects returns "[object Object][object Object]". Adding properties to the objects returned the same
+//Adding two empty objects returns "[object Object][object Object]". Adding properties to the objects returned the same.
+
+// Write a function that takes two numbers and multiplies them together. Test your function on a few inputs. 
+// Write in your comments what happens when you pass something other than a number to your function.
+
+function multiplier (x,y){return x * y}
+
+multiplier(1,2)
+multiplier(-100, 200)
+multiplier("string", "another string")
+
+//Multiplying strings returns NaN
+
+multiplier([1],[2])
+
+//This returns 2. Arrays with more than one number element return NaN.
+
+//================ Readability divider ===================================================================
+
+//Write a function that takes two numbers and a string. If the string is ‘add’, then return the sum of the numbers. If the string is ‘subtract’, return the difference. If the string is ‘mult’, return the product. If the string is ‘div’, return the ratio. Otherwise return 0.
+
+function calculator(num1, num2, operation) {
+    if (operation == "add") {return num1+num2}
+    else if (operation == "subtract") {return num1 - num2}
+    else if (operation == "mult") {return num1*num2}
+    else if (operation == "div") {return num1/num2}
+    else {return 0}
+};
+
+calculator(1, 2, "add")
+calculator(5, 7, "mult")
+calculator(10, 5, "div")
+calculator(10, 5, "pants")
+
+
+
