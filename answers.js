@@ -221,12 +221,38 @@ function returnSum(array) {
     array.forEach(function(each){
         sum += each;
     });
-    return sum
+    return sum;
 }
 
 //console.log(returnSum([1,2,3]));
 
-//Write a function that takes two arrays, and returns an array of all elements that are only in one array. For example, with [1,2,3] and [1,2,4,5] the function should return [3,4,5]. Test your function on different inputs. Hint: you should look up array methods indexOf and slice.
+//Write a function that takes two arrays, and returns an 
+//array of all elements that are only in one array. 
+//For example, with [1,2,3] and [1,2,4,5] the function should 
+//return [3,4,5]. Test your function on different inputs. 
+//Hint: you should look up array methods indexOf and slice.
+
+function takeTwoArrays (ary1, ary2) {
+    var finalarray = [];
+    
+    ary1.forEach(function(each){
+        if (ary2.indexOf(each) === -1)
+            finalarray.push(each);
+    });
+    
+    ary2.forEach(function(each){
+        if (ary1.indexOf(each) === -1)
+            finalarray.push(each);
+    });
+    
+    return finalarray;
+}
+
+//console.log(takeTwoArrays(["cats", "dogs", "porpoises"], ["dogs", "cats", "eagles"]))
+//console.log(takeTwoArrays([1,2,4,7], [1,2,3,7]))
+//console.log(takeTwoArrays([1,NaN], [1]))
+//console.log(takeTwoArrays([],[777, 888]))
+
 
 //Mini Challenge: write a function that takes an array and a function as arguments. 
 //The function should return a new array that maps every element of the input array by passing 
