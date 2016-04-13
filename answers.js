@@ -89,12 +89,63 @@ function calculator(num1, num2, operation) {
     else if (operation == "mult") {return num1*num2}
     else if (operation == "div") {return num1/num2}
     else {return 0}
+}
+
+//console.log(calculator(1, 2, "add"));
+//calculator(5, 7, "mult");
+//calculator(10, 5, "div");
+//calculator(10, 5, "pants");
+
+//Write a function that takes a string and a number, and returns the string repeated that many number of times. Test your function with various inputs.
+
+// I wrote two variants because the question was slightly ambiguous
+
+var stringRepeat = function (string, number) {
+    var finalstring = ""
+    for (var i=0; i<number; i++)
+        finalstring += string;
+    return finalstring;
+}
+
+//console.log(stringRepeat("pants", 3))
+
+var stringRepeater = function(string, number) {
+    while (number >= 0) {
+        number -= 1
+        console.log(string)
+    };
 };
 
-calculator(1, 2, "add")
-calculator(5, 7, "mult")
-calculator(10, 5, "div")
-calculator(10, 5, "pants")
+//stringRepeater("pants", 3)
+
+//Write a function that takes a string, and returns the reverse of that string. For example, if you pass the function the string “hello”, it should return “olleh”. Test your function on a few inputs, including the empty string.
+
+function reverse (string) {
+   var finalstring = ""
+   for (var i=string.length;i>0;i--){
+       finalstring += string.slice(i-1, i)
+   }    
+    return finalstring
+};
+
+console.log(reverse("pants"))
+    
+
+//Write a function that takes a number and returns the factorial of a number. The factorial of 5 is 5x4x3x2x1. The factorial of 0 is 1. Test your input on a few numbers, including negative numbers.
+
+//Write a function that takes a phrase as a string, and returns the longest word in that phrase. If the phrase contains more than one such word, return the first occurrence. Test your function on a few inputs.
+
+//Write a function that takes a phrase, and returns the same phrase with every word capitalized. For example, if you pass your function "hello world", it should return “Hello World” and if you pass it “HELLO WORLD” or even "HeLLo WoRLD", it will also return "Hello World". Test your function of a few inputs.
+
+//Write a function that takes an array and returns the largest number of the array. Test your function on a few inputs.
+
+//Write a function that takes an array, and returns a filtered array. The filtered array should only contain the truthy values from the initial array. Hint: there is an array method called filter that can help you with this :)
+
+//Write a function that takes an array of numbers, and returns the sum of all the numbers in the array.
+
+//Write a function that takes two arrays, and returns an array of all elements that are only in one array. For example, with [1,2,3] and [1,2,4,5] the function should return [3,4,5]. Test your function on different inputs. Hint: you should look up array methods indexOf and slice.
+
+//Mini Challenge: write a function that takes an array and a function as arguments. The function should return a new array that maps every element of the input array by passing it through the function you received. You are not allowed to use Array.map for this challenge, otherwise it would be too easy :)
 
 
 
