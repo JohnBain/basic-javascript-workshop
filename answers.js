@@ -259,5 +259,19 @@ function takeTwoArrays (ary1, ary2) {
 //it through the function you received. You are not allowed to use Array.map for this 
 //challenge, otherwise it would be too easy :)
 
+function twoArgs(ary, func) {
+    ary.forEach(func)  
+}
+
+twoArgs([1,2,3], function(num) {
+    console.log(num)})
+
+
+
+
+
+
+
+
 
 
