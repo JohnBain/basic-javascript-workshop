@@ -165,7 +165,24 @@ function longestWord (phrase) {
 //console.log(longestWord("hungry hippos happy herbivores"))
 //console.log(longestWord("six one two"))
 
-//Write a function that takes a phrase, and returns the same phrase with every word capitalized. For example, if you pass your function "hello world", it should return “Hello World” and if you pass it “HELLO WORLD” or even "HeLLo WoRLD", it will also return "Hello World". Test your function of a few inputs.
+//Write a function that takes a phrase, and returns the same phrase with every word capitalized. 
+//For example, if you pass your function "hello world", it should return “Hello World” and if you pass it “HELLO WORLD” or even 
+//"HeLLo WoRLD", it will also return "Hello World". Test your function of a few inputs.
+
+function wordCapitalizer (phrase) {
+    var splitphrase = phrase.split(" ")
+    var finalphrase = ""
+    
+    for (var i=0;i<splitphrase.length;i++) {
+        splitphrase[i] = splitphrase[i].charAt(0).toUpperCase() + splitphrase[i].slice(1).toLowerCase();
+    }
+    
+    splitphrase = splitphrase.join(" ")
+    return splitphrase
+};
+
+wordCapitalizer("paNtS on fire")
+
 
 //Write a function that takes an array and returns the largest number of the array. Test your function on a few inputs.
 
