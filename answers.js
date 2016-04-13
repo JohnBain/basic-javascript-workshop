@@ -39,9 +39,25 @@ chooseChar("", 2);
 
 /* Returns "" for empty string. Perhaps not a desirable output?*/
 
-//
+// Write a function that takes two numbers and adds them together. Test your function on a few inputs. 
+// Write in the comments what happens when you pass something other than a number to your function.
 
+function addTwoNumbers (first, second) {return first + second}
+    
+addTwoNumbers(1,2)
+addTwoNumbers(-1,-3)
+addTwoNumbers(-4,10)
+addTwoNumbers("chubby", "puppy")
 
+//It concats two strings.
 
+addTwoNumbers(["one"], ["two"])
 
+//It also concats arrays. 
 
+var dog = {};
+var cat = {};
+
+addTwoNumbers(dog, cat)
+
+//Adding two empty objects returns "[object Object][object Object]". Adding properties to the objects returned the same
