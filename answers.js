@@ -128,12 +128,42 @@ function reverse (string) {
     return finalstring
 };
 
-console.log(reverse("pants"))
+//console.log(reverse("pants"))
     
-
 //Write a function that takes a number and returns the factorial of a number. The factorial of 5 is 5x4x3x2x1. The factorial of 0 is 1. Test your input on a few numbers, including negative numbers.
 
-//Write a function that takes a phrase as a string, and returns the longest word in that phrase. If the phrase contains more than one such word, return the first occurrence. Test your function on a few inputs.
+function factorial (num) {
+    if (num <= 0) {
+        return 1
+    }
+    
+    else {
+        return num * factorial(num-1)
+    }
+}
+
+//factorial(10)
+
+//Write a function that takes a phrase as a string, and returns the longest word in that phrase. 
+//If the phrase contains more than one such word, return the first occurrence. Test your function on a few inputs.
+
+function longestWord (phrase) {
+    var splitphrase = phrase.split(" ")
+    var lengthcounter = 0
+    var finalphrase = ""
+    
+    for (var i=0;i<splitphrase.length;i++) {
+        if (splitphrase[i].length > lengthcounter) {
+            lengthcounter = splitphrase[i].length
+            finalphrase = splitphrase[i]
+        }
+    }
+    
+    return finalphrase
+};
+
+//console.log(longestWord("hungry hippos happy herbivores"))
+//console.log(longestWord("six one two"))
 
 //Write a function that takes a phrase, and returns the same phrase with every word capitalized. For example, if you pass your function "hello world", it should return “Hello World” and if you pass it “HELLO WORLD” or even "HeLLo WoRLD", it will also return "Hello World". Test your function of a few inputs.
 
