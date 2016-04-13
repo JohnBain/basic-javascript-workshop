@@ -216,6 +216,16 @@ function filterArray (ary) {
 //Write a function that takes an array of numbers, and returns the sum of all the numbers in 
 //the array.
 
+function returnSum(array) {
+    var sum = 0;
+    array.forEach(function(each){
+        sum += each;
+    });
+    return sum
+}
+
+//console.log(returnSum([1,2,3]));
+
 //Write a function that takes two arrays, and returns an array of all elements that are only in one array. For example, with [1,2,3] and [1,2,4,5] the function should return [3,4,5]. Test your function on different inputs. Hint: you should look up array methods indexOf and slice.
 
 //Mini Challenge: write a function that takes an array and a function as arguments. 
